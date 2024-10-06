@@ -31,3 +31,23 @@ const sum = function(n,m) {
 }
     sum(10,20);//30
     console.log(typeof(sum));//function
+
+
+    //++++++++++++++++++++++++memory+++++++++++++++++++++++++++
+    //Stack used in primitive datatypes(copy). and Heap used in non primitive datatye(refrence).
+    let name = "ravi";
+    let anotherName = name;
+    anotherName="virat";
+    console.log(name);//ravi
+    console.log(anotherName)//virat
+
+    let studentInfo = {
+        name:"Ravi",
+        age:25,
+        email:"ravi@gmail.com"
+    }
+let student1=studentInfo;
+console.log(student1);//{ name: 'Ravi', age: 25, email: 'ravi@gmail.com' }
+student1.email="virat@gmail.com"
+console.log(student1);//{ name: 'Ravi', age: 25, email: 'virat@gmail.com' }
+console.log(studentInfo);//{ name: 'Ravi', age: 25, email: 'virat@gmail.com' }
