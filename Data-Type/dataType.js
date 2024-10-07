@@ -51,3 +51,5 @@ console.log(student1);//{ name: 'Ravi', age: 25, email: 'ravi@gmail.com' }
 student1.email="virat@gmail.com"
 console.log(student1);//{ name: 'Ravi', age: 25, email: 'virat@gmail.com' }
 console.log(studentInfo);//{ name: 'Ravi', age: 25, email: 'virat@gmail.com' }
+
+//we can find the reference of original value in heap;
