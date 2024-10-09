@@ -5,7 +5,7 @@ user.name = "Ravi";
 user.age = 25;
 user.city = "Ballia";
 user.state = "Uttar-Pradesh";
-//console.log(user);
+console.log(user);
 // {
 //     id: 123,
 //     name: 'Ravi',
@@ -26,23 +26,23 @@ const regularUser = {
         }
     }
 };
-// console.log(regularUser);
+console.log(regularUser);
 //{
 //     email: 'ravi@gmail.com',
 //     fullName: {
 //       userName: { firstName: 'Ravi', lastName: 'Kushwaha', userAge: [Object] }
 //     }
 //   }
-// console.log(regularUser.email);//ravi@gmail.com
-// console.log(regularUser.fullName);
+console.log(regularUser.email);//ravi@gmail.com
+console.log(regularUser.fullName);
 // {
 //     userName: { firstName: 'Ravi', lastName: 'Kushwaha', userAge: { age: 25 } }
 //   }
-// console.log(regularUser.fullName.userName);//{ firstName: 'Ravi', lastName: 'Kushwaha', userAge: { age: 25 } }
-// console.log(regularUser.fullName.userName.firstName);//Ravi
-// console.log(regularUser.fullName.userName.lastName);//Kushwaha
-// console.log(regularUser.fullName.userName.userAge);//{ age: 25 }
-// console.log(regularUser.fullName.userName.userAge.age);//25
+console.log(regularUser.fullName.userName);//{ firstName: 'Ravi', lastName: 'Kushwaha', userAge: { age: 25 } }
+console.log(regularUser.fullName.userName.firstName);//Ravi
+console.log(regularUser.fullName.userName.lastName);//Kushwaha
+console.log(regularUser.fullName.userName.userAge);//{ age: 25 }
+console.log(regularUser.fullName.userName.userAge.age);//25
   
 
 
@@ -65,13 +65,13 @@ const obj3={
 // @param source1 — The first source object from which to copy properties.
 // @param source2 — The second source object from which to copy properties.
 
-// const obj4= Object.assign({},obj1,obj2,obj3);
-// console.log(obj4);//{ '1': 'a', '2': 'b', '3': 'a', '4': 'b', '5': 'a', '6': 'b' }
+const obj4= Object.assign({},obj1,obj2,obj3);
+console.log(obj4);//{ '1': 'a', '2': 'b', '3': 'a', '4': 'b', '5': 'a', '6': 'b' }
 
 //spread
 
 const obj5 = {...obj1,...obj2,...obj3};
-//console.log(obj5);//{ '1': 'a', '2': 'b', '3': 'a', '4': 'b', '5': 'a', '6': 'b' }
+console.log(obj5);//{ '1': 'a', '2': 'b', '3': 'a', '4': 'b', '5': 'a', '6': 'b' }
 
 const users = [
     {
@@ -100,10 +100,10 @@ const users = [
         email:"ravi6@gmail.com"
     }
 ]
-// console.log(users[0]);//{ id: 1, name: 'ravi', email: 'ravi@gmail.com' }
-// console.log(users[0].id);//1
-// console.log(users[0].name);//ravi
-// console.log(users[0].email);//ravi@gmail.com
+console.log(users[0]);//{ id: 1, name: 'ravi', email: 'ravi@gmail.com' }
+console.log(users[0].id);//1
+console.log(users[0].name);//ravi
+console.log(users[0].email);//ravi@gmail.com
 
 //map()
 // Calls a defined callback function on each element of an array, and returns an array that contains the results.
@@ -144,3 +144,23 @@ users.map((item)=>{
     // id: 6
     // name: ravi6
     // email: ravi6@gmail.com
+
+    console.log(user);
+    // {
+    //     id: 123,
+    //     name: 'Ravi',
+    //     age: 25,
+    //     city: 'Ballia',
+    //     state: 'Uttar-Pradesh'
+    //   }
+    console.log(Object.keys(user));//[ 'id', 'name', 'age', 'city', 'state' ]
+    console.log(Object.values(user));//[ 123, 'Ravi', 25, 'Ballia', 'Uttar-Pradesh' ]
+    console.log(Object.entries(user));
+    // [
+    //     [ 'id', 123 ],
+    //     [ 'name', 'Ravi' ],
+    //     [ 'age', 25 ],
+    //     [ 'city', 'Ballia' ],
+    //     [ 'state', 'Uttar-Pradesh' ]
+    //   ]
+    console.log(user.hasOwnProperty('age'));//true
