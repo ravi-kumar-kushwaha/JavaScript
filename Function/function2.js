@@ -50,5 +50,6 @@ function returnEachElementOfnewArray(anyArray){
                 cartprice+=array;
               }
               console.log("Total Cart Price is:",cartprice);//Total Cart Price is: 150
+              
 }
 returnEachElementOfnewArray(newArray);
