@@ -54,12 +54,24 @@ console.log(book);
   }
 ]
 */
-const yearAndgenery = books.map((bk)=>bk.edition>1989 && bk.genre==='Science')
+const yearAndgenery = books.filter((bk)=>
+  {
+    return bk.edition >= 1989 && bk.genre==='Science'
+  })
 console.log(yearAndgenery);
 /**
    [
-  false, false, false,
-  false, true,  false,
-  false, true,  false
-    ]
+  {
+    title: 'Book Five',
+    genre: 'Science',
+    publish: 2009,
+    edition: 2014
+  },
+  {
+    title: 'Book Eight',
+    genre: 'Science',
+    publish: 2011,
+    edition: 2016
+  }
+]
  */
