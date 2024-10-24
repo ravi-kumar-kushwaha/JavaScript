@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <div class="dom">
+        <h1 class="heading" id="head1">Document Object Model</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Corporis, natus saepe? Tenetur quidem facere quas quisquam tempore laborum error nihil eligendi nemo nam rem itaque,
+             exercitationem quos mollitia suscipit quae!</p>
+    </div>
+</body>
+</html> 
+
+/*
+> document.getElementById("head1").innerHTML = "<h1>Ravi Verma</>"
+    < "<h1>Ravi Verma</>"
+    > document.getElementById("head1").id
+    < "head1"
+    > document.getElementById("head1").className
+    < "heading"
+    > document.getElementById("head1").getAttribute
+    < function getAttribute() {
+        [native code]
+    }
+    > document.getElementById("head1").getAttribute("id")
+    < "head1"
+    > document.getElementById("head1").getAttribute("class")
+    < "heading"
+    > document.getElementById("head1").setAttribute("class","test")
+    < undefined
+    > 
+    let heading = document.getElementById('head1').innerHTML;
+    < undefined
+    > heading
+    < "<h1>Ravi Verma</h1>"
+    > heading.style.color="pink"
+    < TypeError: undefined is not an object (evaluating 'heading.style.color="pink"')
+    > heading.style.color=pink
+    < ReferenceError: Can't find variable: pink
+    > heading.style.color='pink'
+    < TypeError: undefined is not an object (evaluating 'heading.style.color='pink'')
+    > heading.style.backgroundColor='pink'
+    < TypeError: undefined is not an object (evaluating 'heading.style.backgroundColor='pink'')
+    > heading.style.backgroundColor = 'green'
+    < TypeError: undefined is not an object (evaluating 'heading.style.backgroundColor = 'green'')
+    > 
+    let name = document.getElementById('head1').innerHTML;
+    < undefined
+    > name
+    < "<h1>Ravi Verma</h1>"
+    > name.style.color = 'red'
+    < TypeError: undefined is not an object (evaluating 'name.style.color = 'red'')
+    > 
+    let name = document.getElementById('head1');
+    < SyntaxError: Can't create duplicate variable: 'name'
+    > 
+    let name1 = document.getElementById('head1');
+    < undefined
+    > name1
+    < <h1 class="test" id="head1">…</h1>
+    > name1.style.color = 'pink'
+    < "pink"
+    > let body = document.getElementsByTagName("body")
+    < undefined
+    > body
+    < HTMLCollection [<body>] (1)
+    > body.style.backgroundColor = 'black'
+    < TypeError: undefined is not an object (evaluating 'body.style.backgroundColor = 'black'')
+    > name1.style.backgroundColor = 'bease'
+    < "bease"
+    > name1.style.backgroundColor = 'gray'
+    < "gray"
+    > name1.style.padding = '20px'
+    < "20px"
+    < "20px"
+    > name1.style.borderRadius = '30px'
+    < "30px"
+    > name1.style.alignItems = 'center'
+    < "center"
+    > name1.style.textAlign = 'center'
+    < "center"
+    > name1.valueOf
+    < function valueOf() {
+        [native code]
+    }
+    > name1.value
+    < undefined
+    > name1.innerHTML
+    < "<h1>Ravi Verma</h1>"
+    > name1.innerText
+    < "Ravi Verma
+    
+    
+    "
+    > name1.innerText = "Ravi Kumar Kushwaha"
+    < "Ravi Kumar Kushwaha"
+    > name1.innerText = "<h1>Ravi Kumar Kushwaha</h1>"
+    < "<h1>Ravi Kumar Kushwaha</h1>"
+    > name1.innerText = "Ravi Kumar Kushwaha"
+    < "Ravi Kumar Kushwaha"
+    > name1.innerContent
+    < undefined
+    > name1.textContent
+    < "Ravi Kumar Kushwaha"
+    > document.getElementsByClassName("heading");
+    < HTMLCollection [] (0)
+    > document.getElementsByClassName("test").innerHtml;
+    < undefined
+    > let classdocument.getElementsByClassName("test")
+    < SyntaxError: Unexpected token '.'. Expected ';' after variable declaration.
+    > let class = document.getElementsByClassName("test")
+    < SyntaxError: Unexpected keyword 'class'
+    > let classContent = document.getElementsByClassName("test")
+    < undefined
+    > classContent
+    < HTMLCollection [<h1 id="head1">] (1)
+    > classContent.innerText
+    < undefined
+    > document.querySelector(h1)
+    < ReferenceError: Can't find variable: h1
+    > document.querySelector('h1')
+    < <h1 class="test" id="head1" style="color: pink; background-color: gray; padding: 20px; border-radius: 30px; align-items: center; text-align: center;">…</h1>
+    > document.querySelector('p')
+    < <p>
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Corporis, natus saepe? Tenetur quidem facere quas quisquam tempore laborum error nihil eligendi nemo nam rem itaque,
+                 exercitationem quos mollitia suscipit quae!"
+    </p>
+    > document.querySelector('#heading')
+    < null
+    > document.querySelector('#head1')
+    < <h1 class="test" id="head1" style="color: pink; background-color: gray; padding: 20px; border-radius: 30px; align-items: center; text-align: center;">…</h1>
+    > document.querySelector('.test')
+    < <h1 class="test" id="head1" style="color: pink; background-color: gray; padding: 20px; border-radius: 30px; align-items: center; text-align: center;">…</h1>
+    > document.querySelector('input[type='text']')
+    < SyntaxError: Unexpected identifier 'text'. Expected ')' to end an argument list.
+*/
