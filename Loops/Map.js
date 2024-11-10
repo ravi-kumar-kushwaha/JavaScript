@@ -23,3 +23,43 @@ num.forEach((item)=>{
 
 const num1 = num.map((item)=>item*10).map((item)=>item+2);
 console.log(num1); //[12, 22, 32, 42, 52,62, 72, 82, 92]
+
+
+const num2 = [
+    {
+        name:"mango",
+        price:20
+    },
+    {
+        name:"mango",
+        price:10
+    },
+    {
+        name:"mango",
+        price:110
+    },
+    {
+        name:"mango",
+        price:120
+    },
+    {
+        name:"mango",
+        price:210
+    },
+    {
+        name:"mango",
+        price:230
+    },
+]
+//method 1
+const data = num2.map((item)=>
+    item.price
+    // console.log(item.price);
+    // console.log(Math.max(item.price));
+)
+console.log(data);
+const maxprice = Math.max(...data);
+console.log(maxprice);//230
+//method 2
+const maxPrice = num2.reduce((max,item)=>Math.max(max,item.price),0);
+console.log(maxPrice);//230
