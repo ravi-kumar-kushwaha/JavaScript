@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackGround Color Changer</title>
+</head>
+<body>
+    <h1>Click on start button to change the background and click on stop button to stop the background change!</h1>
+    <button id="start">Start</button>
+   <button id="stop">Stop</button>
+    <Script>
+        let backgroundChange ;
+       const changeBackground = ()=>{
+            const hexcode = '0123456789abcdef'
+            let Color = '#'
+           for(let i=0;i<=5;i++){
+            Color += hexcode[Math.floor(Math.random()*16)]
+           }
+          return Color
+        };
+        const body =  document.querySelector('body');
+           const start = document.querySelector('#start');
+           const stop = document.querySelector('#stop');
+           start.addEventListener('click',()=>{
+            if(!backgroundChange){
+             backgroundChange = setInterval(()=>{
+                body.style.backgroundColor = changeBackground();
+             },1000);
+            }
+           })
+
+           stop.addEventListener('click',()=>{
+            clearInterval(backgroundChange);
+            backgroundChange = null;
+           })
+        
+
+    </Script>
+</body>
+</html>
