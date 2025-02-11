@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversing</title>
+</head>
+
+<body>
+    <h1>Array Traversing.</h1>
+    <input type="text" id="element" placeholder="Enter the index of element">
+    <button onclick="handleGetElement()">Get Element</button><br />
+    <script> 
+        
+        let data = [1, 2, 3, 4, 5];
+        for (let i = 0; i < data.length; i++) {
+            document.write(`array at index ${i} is ${data[i]} <br/>`);
+        }
+        function handleGetElement() {
+            let element = document.getElementById('element').value;
+            if (element < data.length && typeof parseInt(element) === "number" && element>-1) {
+                alert(`value at index ${element} is ${data[element]}`);
+            } else {
+                alert("Please enter a valid number!");
+            }
+        }
+    </script>
+</body>
+
+</html>
