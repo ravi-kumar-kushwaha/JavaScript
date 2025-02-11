@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Element In Array</title>
+</head>
+
+<body>
+    <h1>Insert Element In Array</h1>
+    <input type="text" id="position" placeholder="Enter the position of new element">
+    <input type="text" id="newElement" placeholder="Enter the value of new element">
+    <button onclick="handleInsertion()">Insert Element</button>
+    <script>
+        function handleInsertion() {
+            const array = [2, 4, 1, 6, 8, 5];
+            let position = document.getElementById("position").value;
+            let element = document.getElementById("newElement").value;
+            element = parseInt(element);
+            position = parseInt(position);
+            if (isNaN(position) || isNaN(element) || position < 0 || position > array.length) {
+                alert("Please enter a valid position or element!");
+                return;
+            }
+            else{
+            for (let i = array.length - 1; i >= 0; i--) {
+                if (i >= position) {
+                    array[i + 1] = array[i];
+                    if (i === position) {
+                        array[i] = element;
+                    }
+                } 
+            }}
+            alert(array)
+        }
+    </script>
+</body>
+
+</html>
